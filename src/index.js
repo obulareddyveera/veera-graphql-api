@@ -5,6 +5,13 @@ import schema from "./graphql/schema.js"; // Import your GraphQL schema
 
 const app = express();
 
+app.get("/", (req, res) => {
+  res.send("Hello from Express on Veera GraphQL Service!");
+});
+
+app.get("/api", (req, res) => {
+  res.json({ message: "This is the API endpoint!" });
+});
 app.use(
   "/api/graphql",
   graphqlHTTP({
@@ -12,9 +19,5 @@ app.use(
     graphiql: true, // Enable GraphiQL UI for testing
   })
 );
-// const port = process.env.PORT || 3000;
-// app.listen(port, () => {
-//   console.log(`Server is running on http://localhost:${port}/api/graphql`);
-// });
 
 export default app;
