@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "node api/index.js"
+    "dev": "node api/graphql.js"
   },
   "prisma": {
     "seed": "node ./prisma/seed.js"
